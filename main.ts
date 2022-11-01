@@ -39,14 +39,6 @@ let Pins = 0
 Pins = 0
 basic.forever(function () {
     if (gamestart == 1) {
-        if (sprite.isTouching(sprite1)) {
-            basic.showString("" + (points))
-            gamestart = 3
-        }
-    }
-})
-basic.forever(function () {
-    if (gamestart == 1) {
         for (let index = 0; index < 5; index++) {
             basic.pause(200)
             sprite1.change(LedSpriteProperty.X, -1)
@@ -54,6 +46,14 @@ basic.forever(function () {
         points += 1
         sprite1.delete()
         sprite1 = game.createSprite(4, 4)
+    }
+})
+basic.forever(function () {
+    if (gamestart == 1) {
+        if (sprite.isTouching(sprite1)) {
+            basic.showString("" + (points))
+            gamestart = 3
+        }
     }
 })
 basic.forever(function () {

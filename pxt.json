@@ -1,5 +1,5 @@
 {
-    "name": "Lock",
+    "name": "Lockable game",
     "description": "",
     "dependencies": {
         "core": "*",
