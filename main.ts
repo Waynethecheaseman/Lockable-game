@@ -3,7 +3,9 @@ input.onButtonPressed(Button.A, function () {
         Pins += 1
     }
     if (Pins == 3) {
-        sprite.change(LedSpriteProperty.Y, -2)
+        sprite.change(LedSpriteProperty.Y, -1)
+        basic.pause(100)
+        sprite.change(LedSpriteProperty.Y, -1)
         basic.pause(500)
         sprite.change(LedSpriteProperty.Y, 2)
     }
@@ -60,4 +62,8 @@ basic.forever(function () {
     if (gamestart == 3) {
         game.gameOver()
     }
+})
+basic.forever(function () {
+    music.playMelody("F E F D D C E F ", 120)
+    music.playMelody("F E F C D E F D ", 120)
 })
